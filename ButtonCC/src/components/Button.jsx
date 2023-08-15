@@ -1,22 +1,14 @@
-// React 16 Button Component
-
 import { useState } from 'react'
 
-const Button = ( {position, text} ) => {
+const Button = ( {position} ) => {
   const [count, setCount] = useState(0);
 
   return (<button
     position={position}
     className="btn btn-default"
-    style={{
-      margin: '10px 5px', 
-      width: '400px', 
-      height: '200px'
-    }}
     onClick={() => setCount((count) => count + 1)}
   >
-    Count is {count}! <br />
-    And position is {position}
+    Position is {position[0] + ','+position[1]} <br />
   </button>
   );
 }

@@ -1,16 +1,24 @@
+import { useState } from 'react'
 import Button from './components/Button.jsx'
 import './App.css'
 
-
 function App() {
-  
 
+  let buttonGrid = [];
+
+  for (let i = 0; i < 5; i++){
+    for (let j = 0; j < 5; j++){
+      buttonGrid.push(<div key = {[i,j]} className="card">
+      <Button position={[i,j]}>, 
+      </Button>
+    </div>);
+    }
+  }
+  
   return (
     <>
-      <h1>Let's have fun with buttons!</h1>
-      <div className="card">
-        <Button position = "[0,0]">
-        </Button>
+      <div className="buttonGrid">
+        {buttonGrid}
       </div>
     </>
   )
