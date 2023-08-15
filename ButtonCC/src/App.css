@@ -1,21 +1,23 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(5, 150px);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.card {
+  padding: 5px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.btn {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, blue, black);
+  color: #fff;
 }
 
 @keyframes logo-spin {
@@ -31,12 +33,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
