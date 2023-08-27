@@ -4,6 +4,8 @@ const Button = ( {position} ) => {
   const [count, setCount] = useState(0);
   const [bgc, setBgc] = useState('red');
 
+  const colors = ['red', 'green', 'blue'];
+
   return (<button
     position={position}
     className="btn btn-default"
