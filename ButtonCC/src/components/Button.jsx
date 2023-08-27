@@ -11,7 +11,7 @@ const Button = ( {position} ) => {
     className="btn btn-default"
     style={{backgroundColor: bgc, backgroundImage: "none"}} 
     // removing background image since that is how we got the gradients working in App.css, and currently background-image takes precedence over background-color
-    onClick={() => setBackgroundColor((bgc) => colors[colors.indexOf(bgc) + 1])}
+    onClick={() => setBackgroundColor((bgc) => colors[(colors.indexOf(bgc) + 1) % colors.length ])}
   >
     Position is {position[0] + ',' + position[1]} <br />
   </button>
