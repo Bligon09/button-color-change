@@ -9,7 +9,7 @@ function App() {
   for (let i = 0; i < 5; i++){
     for (let j = 0; j < 5; j++){
       buttonGrid.push(<div key = {[i,j]} className="card">
-      <Button position={[i,j]}>, 
+      <Button position={[i,j]} /* this is a prop */>, 
       </Button>
     </div>);
     }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const Button = ( {position} ) => {
   const [count, setCount] = useState(0);
+  const [numCheck, setNumCheck] = useState(0); 
 
   return (<button
     position={position}
