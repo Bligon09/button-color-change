@@ -1,15 +1,14 @@
 import { useState } from 'react'
 
-const Button = ( {position} ) => {
+const Button = ( {position, onButtonClick} ) => {
   const [count, setCount] = useState(0);
-  const [numCheck, setNumCheck] = useState(0); 
 
   return (<button
     position={position}
     className="btn btn-default"
-    onClick={() => setCount((count) => count + 1)}
+    onClick={() => onButtonClick(position)}
   >
-    Position is {position[0] + ','+position[1]} <br />
+    Position is {position[0] + ',' + position[1]} <br />
   </button>
   );
 }
