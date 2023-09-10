@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Button = ( {position, onButtonClick} ) => {
+const Button = ( {position, newCenter, onButtonClick} ) => {
   const [count, setCount] = useState(0);
 
   return (<button
@@ -9,6 +9,7 @@ const Button = ( {position, onButtonClick} ) => {
     onClick={() => onButtonClick(position)}
   >
     Position is {position[0] + ',' + position[1]} <br />
+    newCenter is {newCenter[0] + ', ' + newCenter[1]}
   </button>
   );
 }
