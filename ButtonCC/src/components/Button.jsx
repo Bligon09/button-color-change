@@ -1,10 +1,18 @@
-import { useState } from 'react'
-
 const Button = ( {position, newCenter, onButtonClick} ) => {
-  const [count, setCount] = useState(0);
+
+  const updateBackgroundImage = (center, pos) => {
+    console.log(center);
+    if(center.toString() == pos.toString()){
+      return "radial-gradient(blue, black)";
+    }
+    return "linear-gradient(75deg, red, black)";
+  }
+
+  const bgi=updateBackgroundImage(newCenter, position);
 
   return (<button
     position={position}
+    style={{backgroundImage: bgi}}
     className="btn btn-default"
     onClick={() => onButtonClick(position)}
   >
